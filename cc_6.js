@@ -47,3 +47,12 @@ function calculateTotalHours(employeeName) {
     console.log(`${employeeName} has worked a total of ${totalHours} hours this week.`);
     return totalHours;
 }
+
+//Create a Function to List Employees with Free Days
+
+function listAvailableEmployees(day) {
+    const availableEmployees = employees.filter(employee => 
+        !employee.shifts.some(shift => shift.day === day)
+    ).map(emp => emp.name);
+    console.log(`Available employees on ${day}: ${availableEmployees.join(', ')}`);
+}
