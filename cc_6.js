@@ -56,3 +56,9 @@ function listAvailableEmployees(day) {
     ).map(emp => emp.name);
     console.log(`Available employees on ${day}: ${availableEmployees.join(', ')}`);
 }
+
+// Example 1:
+displayEmployeeShifts(employees[0]); // Displays shifts for John
+assignShift('John', 'Friday', 5); // Assigns a shift to John
+listAvailableEmployees('Tuesday'); // Lists employees available on Tuesday
+calculateTotalHours('David'); // Calculates total hours for David
